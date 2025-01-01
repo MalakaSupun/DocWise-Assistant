@@ -20,7 +20,7 @@ documents = loader.load()
 # vectordb = Chroma.from_documents(
 #     documents=text_chunks,
 #     embedding=embeddings,
-#     persist_directory="vector_db_dir"
+#     persist_directory="vector_db_directory"
 # )
 
 print("Documents Vectorized")
