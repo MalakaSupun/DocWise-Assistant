@@ -7,7 +7,7 @@ from langchain_chroma import Chroma
 # # loaidng the embedding model
 # embeddings = HuggingFaceEmbeddings()
 
-# loader = DirectoryLoader(path="data",
+# loader = DirectoryLoader(path="Data_Docs",
 #                          glob="./*.pdf",
 #                          loader_cls=UnstructuredFileLoader)
 # documents = loader.load()
