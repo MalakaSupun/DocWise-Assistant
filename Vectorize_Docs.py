@@ -4,13 +4,13 @@ from langchain_text_splitters import CharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
-# # loaidng the embedding model
-# embeddings = HuggingFaceEmbeddings()
+# loaidng the embedding model
+embeddings = HuggingFaceEmbeddings()
 
-# loader = DirectoryLoader(path="Data_Docs",
-#                          glob="./*.pdf",
-#                          loader_cls=UnstructuredFileLoader)
-# documents = loader.load()
+loader = DirectoryLoader(path="Data_Docs",
+                          glob="./*.pdf",
+                          loader_cls=UnstructuredFileLoader)
+documents = loader.load()
 
 
 # text_splitter = CharacterTextSplitter(chunk_size=2000,
