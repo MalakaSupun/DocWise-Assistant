@@ -5,7 +5,7 @@ config.json
 
 # Ignore all files in this folders...
 Data_sets/
-Data_Docs/
+Data_Docs/*.pdf
 
 # Ignore all `.log` files
 *.log
