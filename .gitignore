@@ -1,6 +1,7 @@
 # Ignore Specific Files...
 Data_sets/Org_data.csv
 git_commands.txt
+config.json
 
 # Ignore all files in this folders...
 Data_sets/
