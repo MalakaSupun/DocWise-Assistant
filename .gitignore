@@ -13,3 +13,7 @@ Data_Docs/*.pdf
 # Ignore system files
 .DS_Store
 *.swp
+
+# Vector databases
+vector_db_dir/
+vector_db_directory/
