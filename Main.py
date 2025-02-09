@@ -64,7 +64,7 @@ if "conversationsal_chain" not in st.session_state:
     st.session_state.conversationsal_chain = chat_chain(st.session_state.vectorstore)
 
 
-for message in st.session_state.chat_history:
+for message in st.session_state.chat_history: 
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
