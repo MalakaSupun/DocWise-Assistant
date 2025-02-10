@@ -18,18 +18,19 @@ DocWise Assistance is an intelligent chatbot application powered by advanced Lar
        <img width="1024" src='Images/Logo_06.png' alt="Workflow">
 </p>
 
-<p align="justify">
+
+<div align="justify">
 The workflow of the DocWise Assistant involves several key steps to ensure accurate and efficient document querying:
 
-1. **Document Upload:** Users upload multiple PDF documents to the system.
-2. **Document Processing:** The system processes the documents using advanced NLP techniques to extract and index the content.
-3. **Query Input:** Users input their questions related to the document content.
-4. **Query Analysis:** The system analyses the query and retrieves relevant information from the indexed documents.
-5. **Response Generation:** Using RAG techniques, the system generates a context-aware response.
-6. **Response Delivery:** The system delivers the response to the user in real-time.
+1. **📄 Document Upload:** Users upload multiple PDF documents to the system.
+2. **📝 Document Processing:** The system processes the documents using advanced NLP techniques to extract and index the content.
+3. **❓ Query Input:** Users input their questions related to the document content.
+4. **🔍 Query Analysis:** The system analyses the query and retrieves relevant information from the indexed documents.
+5. **💡 Response Generation:** Using RAG techniques, the system generates a context-aware response.
+6. **🚀 Response Delivery:** The system delivers the response to the user in real-time.
 
 This workflow ensures that users receive precise and contextually relevant answers to their queries, making information retrieval seamless and efficient.
-</p>
+</div>
 
 #
 # Functionality:
