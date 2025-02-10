@@ -1,5 +1,27 @@
-import os
+
+# Main script for the DocWise Assistant application.
+
+# This script sets up a Streamlit web application that allows users to interact with a conversational AI model.
+# The application uses various libraries including Streamlit, LangChain, and HuggingFace for embeddings.
+
+# Functions:
+#     setup_vectorstore(): Initializes and returns a Chroma vector store with HuggingFace embeddings.
+#     chat_chain(vectorstore): Sets up and returns a ConversationalRetrievalChain using the provided vector store.
+
+# Streamlit UI Elements:
+#     - Page configuration and title.
+#     - Chat history management.
+#     - User input handling.
+#     - Display of chat messages.
+
+# Environment Variables:
+#     - GROQ_API_KEY: API key for accessing the Groq model.
+
+# Configuration:
+#     - Reads configuration data from 'config.json' located in the same directory as this script.
+
 import json
+import os
 
 import streamlit as st
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -45,14 +67,43 @@ def chat_chain(vectorstore):
 
     return chain
 
-
+    st.markdown(
+        """
+        <style>
+        .main {
+            background-color: #0e1117;
+            color: #c9d1d9;
+        }
+        .stButton>button {
+            background-color: #21262d;
+            color: #c9d1d9;
+        }
+        .stTextInput>div>div>input {
+            background-color: #21262d;
+            color: #c9d1d9;
+        }
+        .stTextArea>div>div>textarea {
+            background-color: #21262d;
+            color: #c9d1d9;
+        }
+        .stMarkdown {
+            color: #c9d1d9;
+        }
+        .stChatMessage {
+            background-color: #21262d;
+            color: #c9d1d9;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 st.set_page_config(
-    page_title="Multi Doc Chat",
+    page_title="DocWise Assistant.",
     page_icon = "📚",
     layout="centered"
 )
 
-st.title("📚 Multi Documents Chatbot")
+st.title("📚 DocWise Assistant..")
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
