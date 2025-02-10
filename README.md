@@ -9,7 +9,7 @@ DocWise Assistant
 # Introduction:
 
 <p align="justify">
-DocWise Assistance is an intelligent chatbot application powered by advanced Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) techniques. The system is designed to process and understand multiple PDF documents, enabling users to ask any questions about the content within those files and receive accurate, context-aware answers.
+DocWise Assistance is an intelligent chatbot application powered by advanced Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) techniques. 📚🤖 The system is designed to process and understand multiple PDF documents, enabling users to ask any questions about the content within those files and receive accurate, context-aware answers. 📝❓💡
 
 #
 # Workflow:
