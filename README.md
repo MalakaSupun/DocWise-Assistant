@@ -27,7 +27,7 @@ The workflow of the DocWise Assistant involves several key steps to ensure accur
 3. **❓ Query Input:** Users input their questions related to the document content.
 4. **🔍 Query Analysis:** The system analyses the query and retrieves relevant information from the indexed documents.
 5. **💡 Response Generation:** Using RAG techniques, the system generates a context-aware response.
-6. **🚀 Response Delivery:** The system delivers the response to the user in real-time.
+6. **🚀 Response Delivery:** The system delivers the response to the user in real time.
 
 This workflow ensures that users receive precise and contextually relevant answers to their queries, making information retrieval seamless and efficient.
 </div>
@@ -53,11 +53,11 @@ DocWise Assistant is a versatile solution for individuals and organisations that
 <p align="justify">
 The DocWise Assistant has been tested with a variety of document types and has demonstrated exceptional performance in extracting and providing accurate information. Key results include:
 
-**📈 High Accuracy:** Achieved over 95% accuracy in answering questions based on document content.
+**📈 High Accuracy:** Achieved over 90% accuracy in answering questions based on document content.
 
-**⏱️ Fast Response Time:** Average response time of less than 2 seconds per query.
+**⏱️ Fast Response Time:** Average response time of less than 2-5 seconds per query.
 
-**📄 Extensive Document Handling:** Successfully processed and queried documents ranging from 1 to 500 pages.
+**📄 Extensive Document Handling:** Successfully processed and queried documents ranging from 1 to 50 pages.
 
 **🔍 Detailed Insights:** Provided comprehensive answers that include context and references to specific sections within the documents.
 
