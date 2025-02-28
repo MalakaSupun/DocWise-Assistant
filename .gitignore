@@ -21,3 +21,8 @@ vector_db_directory/
 */__pycache__
 
 Test*.py
+
+*.pdf
+*.bin
+*.sqlite3
+*.bin
