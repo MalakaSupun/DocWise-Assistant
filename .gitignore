@@ -18,6 +18,7 @@ Data_Docs/*.pdf
 vector_db_dir/
 vector_db_directory/
 
+# Config files ...
 */__pycache__
 
 # Ignore test files...
