@@ -20,8 +20,10 @@ vector_db_directory/
 
 */__pycache__
 
+# Ignore test files...
 Test*.py
 
+# Ignore LLM file types...
 *.pdf
 *.bin
 *.sqlite3
