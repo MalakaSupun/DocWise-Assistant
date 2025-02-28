@@ -37,6 +37,11 @@ config_data = json.load(open(f"{working_dir}/config.json"))
 GROQ_API_KEY = config_data["GROQ_API_KEY"]
 os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
+# Set proxy (replace with your actual proxy URL)
+PROXY_URL = "http://192.168.34.20:44355"  
+os.environ["HTTP_PROXY"] = PROXY_URL
+os.environ["HTTPS_PROXY"] = PROXY_URL
+
 
 def setup_vectorstore():
     persist_directory = f"{working_dir}/vector_db_dir"

@@ -17,3 +17,7 @@ Data_Docs/*.pdf
 # Vector databases
 vector_db_dir/
 vector_db_directory/
+
+*/__pycache__
+
+Test*.py

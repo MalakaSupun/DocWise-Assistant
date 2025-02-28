@@ -12,19 +12,23 @@ print("Starting ...")
 
 Working_dir = os.path.dirname(os.path.abspath((__file__)))
 config_data = json.load(open(f"{Working_dir}/config.json"))
-print(config_data)
+if config_data is not None:
+    print("Json Loaded... \n")
 
 GROQ_API_KEY = config_data["GROQ_API_KEY"]
 os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
+# Set proxy (replace with your actual proxy URL)
+PROXY_URL = "http://192.168.29.110:44355"  
+os.environ["HTTP_PROXY"] = PROXY_URL
+os.environ["HTTPS_PROXY"] = PROXY_URL
 
 # Loading Embedding model..
 embeddings = HuggingFaceEmbeddings()
 
 # Load LLM..
-
-llm_01 = ChatGroq(model="llama-3.1-70b-versatile",temperature=0)
-llm_02 = ChatGroq(model="mistral-saba-24b", temperature=0)
+#llm_01 = ChatGroq(model="llama-3.1-70b-versatile",temperature=0)
+#llm_02 = ChatGroq(model="mistral-saba-24b", temperature=0)
 llm_03 = ChatGroq(model="deepseek-r1-distill-llama-70b", temperature=0)
 
 
@@ -47,10 +51,10 @@ def answer_Q(user_quections):
         llm = llm_03,
         chain_type="stuff",
         retriever= Retriever,
-        return_source_documents=True
+        #return_source_documents=True
     )
 
     responce = qa_chain.invoke({"query":user_quections})
-    answer = responce("result")
+    LLM_answer = responce["result"]
 
-    return answer
+    return LLM_answer
