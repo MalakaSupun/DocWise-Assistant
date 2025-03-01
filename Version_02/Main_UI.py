@@ -1,12 +1,14 @@
 import os
 import streamlit as st
 import re
-from RAG_Functions import *
+
+
 
 # Set proxy (replace with your actual proxy URL)
 PROXY_URL = "http://192.168.4.137:44355"  
-os.environ["HTTP_PROXY"] = PROXY_URL
-os.environ["HTTPS_PROXY"] = PROXY_URL
+# PROXY_URL = "" 
+# os.environ["HTTP_PROXY"] = PROXY_URL
+# os.environ["HTTPS_PROXY"] = PROXY_URL
 
 st.set_page_config(
     page_title="DocWise Assistant.",
@@ -17,9 +19,27 @@ st.set_page_config(
 st.sidebar.title("Navigate LLMs 🤖")
 st.sidebar.write("Welcome to DocWise 📝 Assistant! 🚀")
 
-st.sidebar.button(label="DeepSeek R1", icon="🐬")
-st.sidebar.button(label="mistral-saba-24b", icon='🎯')
-st.sidebar.button(label="llama-3.1-70b-versatile", icon='🦙')
+Model = st.sidebar.radio(
+    "Select Model",
+    options=["DeepSeek R1", "Mistral", "Llama 3.1 70B Versatile"],
+    format_func=lambda x: {
+        "DeepSeek R1": "🐬 DeepSeek R1",
+        "Mistral": "🎯 Mistral",
+        "Llama 3.1 70B Versatile": "🦙 Llama 3.1 70B Versatile"
+    }[x]
+)
+
+# Add a text input for the proxy URL
+proxy_input = st.sidebar.text_input("Enter Proxy URL", value=PROXY_URL)
+
+# # Update the proxy environment variables if the input is changed
+if proxy_input != PROXY_URL:
+    # Add a button to apply the proxy settings
+    if st.sidebar.button("Apply Proxy Settings"):
+        os.environ["HTTP_PROXY"] = proxy_input
+        os.environ["HTTPS_PROXY"] = proxy_input
+        PROXY_URL = proxy_input
+        st.sidebar.success("Proxy settings applied successfully!")
 
 # Set the title of the Streamlit app
 st.title("DocWise Assistant")
@@ -35,7 +55,8 @@ if uploaded_file is not None:
     # Save the uploaded PDF to the specified path
     with open(save_pdf_path, "wb") as pdf:
         pdf.write(uploaded_file.getbuffer())
-
+ 
+    from RAG_Functions import process_docs_to_chromaDB,answer_Q
     process_docs = process_docs_to_chromaDB(uploaded_file.name)
     st.info("Doc Procees Completed! 🍀 ")
 
@@ -55,7 +76,7 @@ if st.button("Get Answers ╰┈➤"):
 
 
     answer = answer_Q(user_question)
-    st.markdown("### DeepSeek R1")
+    st.markdown(f"### {Model}")
     s=str(answer)
     
     think_content = re.search(r'<think>(.*?)</think>', s, re.DOTALL).group(1)
@@ -68,10 +89,4 @@ if st.button("Get Answers ╰┈➤"):
     # print("Final Anwer:",final_answer)
     st.markdown(final_answer)
     
-    
-    # # Add the new question and answer to the conversation history
-    # if st.button("Get Answers"):
-    #     answer = answer_Q(user_question)
-    #     st.session_state.conversation.append((user_question, answer))
-    #     st.markdown("### DeepSeek R1")
-    #     st.markdown(answer)
+  

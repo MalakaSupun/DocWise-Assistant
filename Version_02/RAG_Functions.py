@@ -18,8 +18,8 @@ if config_data is not None:
 GROQ_API_KEY = config_data["GROQ_API_KEY"]
 os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
-# Set proxy (replace with your actual proxy URL)
-PROXY_URL = "http://192.168.29.110:44355"  
+# # Set proxy (replace with your actual proxy URL)
+PROXY_URL = "http://192.168.4.137:44355"  
 os.environ["HTTP_PROXY"] = PROXY_URL
 os.environ["HTTPS_PROXY"] = PROXY_URL
 
