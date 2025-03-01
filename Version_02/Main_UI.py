@@ -4,7 +4,7 @@ import re
 from RAG_Functions import *
 
 # Set proxy (replace with your actual proxy URL)
-PROXY_URL = "http://192.168.29.110:44355"  
+PROXY_URL = "http://192.168.4.137:44355"  
 os.environ["HTTP_PROXY"] = PROXY_URL
 os.environ["HTTPS_PROXY"] = PROXY_URL
 
