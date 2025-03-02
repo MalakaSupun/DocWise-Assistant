@@ -8,6 +8,8 @@ from langchain_chroma import Chroma
 from langchain.chains import RetrievalQA
 from langchain_groq import ChatGroq
 
+import streamlit as st
+
 print("Starting ...")
 
 Working_dir = os.path.dirname(os.path.abspath((__file__)))
@@ -19,18 +21,12 @@ GROQ_API_KEY = config_data["GROQ_API_KEY"]
 os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
 # # Set proxy (replace with your actual proxy URL)
-PROXY_URL = "http://192.168.4.137:44355"  
-os.environ["HTTP_PROXY"] = PROXY_URL
-os.environ["HTTPS_PROXY"] = PROXY_URL
+# PROXY_URL = "http://192.168.4.137:44355"  
+# os.environ["HTTP_PROXY"] = PROXY_URL
+# os.environ["HTTPS_PROXY"] = PROXY_URL
 
 # Loading Embedding model..
 embeddings = HuggingFaceEmbeddings()
-
-# Load LLM..
-#llm_01 = ChatGroq(model="llama-3.1-70b-versatile",temperature=0)
-#llm_02 = ChatGroq(model="mistral-saba-24b", temperature=0)
-llm_03 = ChatGroq(model="deepseek-r1-distill-llama-70b", temperature=0)
-
 
 def process_docs_to_chromaDB(file_name):
     loader = UnstructuredPDFLoader(f"{Working_dir}/{file_name}")
@@ -47,8 +43,19 @@ def answer_Q(user_quections):
     )
     Retriever = vectordb.as_retriever()
 
+    # Load LLM..
+    params = st.query_params['model']
+    # print(params,'\n\n\n')
+
+    if params == "Mistral-saba-24b":
+        llm= ChatGroq(model="mistral-saba-24b", temperature=0)
+    elif params == "llama-3.2-11b-vision-preview":
+        llm= ChatGroq(model="llama-3.2-11b-vision-preview",temperature=0)
+    else:
+        llm= ChatGroq(model="deepseek-r1-distill-llama-70b", temperature=0) 
+
     qa_chain = RetrievalQA.from_chain_type(
-        llm = llm_03,
+        llm = llm,
         chain_type="stuff",
         retriever= Retriever,
         #return_source_documents=True
