@@ -53,8 +53,8 @@ if "model" not in st.session_state:
 if st.session_state.model != Model:
     st.session_state.model = Model
     st.query_params.update({"model":Model})
-    print("\n\n Button Press ")
-    print(st.query_params['model'],"\n\n\n")
+    # print("\n\n Button Press ")
+    # print(st.query_params['model'],"\n\n\n")
 
 # Move the proxy settings to the bottom of the sidebar
 st.sidebar.markdown("---")  # Add a horizontal line for separation
@@ -111,7 +111,7 @@ if st.button(" 💡 Get Answer ╰┈➤"):
     st.markdown(f"### {Model}")
     if Model == "DeepSeek R1":
         s=str(answer)
-        print(s)
+        # print(s)
         
         think_content = re.search(r'<think>(.*?)</think>', s, re.DOTALL).group(1)
         # print(think_content)
