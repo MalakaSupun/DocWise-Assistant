@@ -29,3 +29,6 @@ Test*.py
 *.bin
 *.sqlite3
 *.bin
+
+# Ignore Chat History..
+chat_history
