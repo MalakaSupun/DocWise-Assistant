@@ -21,6 +21,21 @@ st.sidebar.markdown("Your friendly 🤗 RAG Document Assistant 🤖, here to hel
 st.sidebar.markdown("---")  # Add a horizontal line for separation
 st.sidebar.header("LLM Selection 🌀")
 
+# Add custom CSS to style the sidebar
+# st.markdown(
+#     """
+#     <style>
+#     [data-testid="stSidebarContent"]{
+#         background-color: #e5e5f7;
+# opacity: 0.4;
+# background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 22.5px 22.5px, linear-gradient(#989bc5 1.8px, transparent 1.8px) 0 -0.9px, linear-gradient(90deg, #989bc5 1.8px, #e5e5f7 1.8px) -0.9px 0;
+# background-size: 45px 45px, 45px 45px, 22.5px 22.5px, 22.5px 22.5px;
+#     }
+    
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 Model = st.sidebar.radio(
     "Select a suitable LLM for the occasion 🤓",
