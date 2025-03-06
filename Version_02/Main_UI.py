@@ -4,7 +4,7 @@ import re
 import shelve
 
 # Set proxy (replace with your actual proxy URL)
-# PROXY_URL = "http://192.168.101.243:44355"  
+PROXY_URL = "http://192.168.101.243:44355"  
 
 st.set_page_config(
     page_title="DocWise Assistant.",
