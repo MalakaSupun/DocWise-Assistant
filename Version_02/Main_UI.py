@@ -13,7 +13,6 @@ st.set_page_config(
 )
 
 USER_AVATAR = "👤"
-
 # BOT_AVATAR = "🤖"
 
 BOT_AVATARS = {
