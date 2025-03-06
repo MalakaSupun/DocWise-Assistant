@@ -3,6 +3,8 @@ import streamlit as st
 import re
 import shelve
 
+
+
 # Set proxy (replace with your actual proxy URL)
 PROXY_URL = "http://192.168.101.243:44355"  
 
@@ -45,6 +47,7 @@ if "messages" not in st.session_state:
 
 st.sidebar.title("Navigate LLMs 🤖")
 st.sidebar.write("Welcome to DocWise 📝 Assistant! 🚀")
+st.sidebar.write("---")
 
 def format_model(model_name):
     return f"{BOT_AVATARS[model_name]} {model_name}"
@@ -70,10 +73,11 @@ if st.session_state.model != Model:
     # print(st.query_params['model'],"\n\n\n")
 
 st.sidebar.markdown("---")  # Add a horizontal line for separation
-st.sidebar.header("History ")
+st.sidebar.header("⏳ History ⏳")
+st.sidebar.write("🧹 Clear the history 🌱 of this conversation 🍀 and start fresh... 🌟")
 
 # Sidebar with a button to delete chat history
-if st.sidebar.button("Delete Chat History"):
+if st.sidebar.button("🗑️ Delete Chat History 🚮"):
     st.session_state.messages = []
     save_chat_history([])
 
@@ -131,7 +135,8 @@ if user_question := st.chat_input("Ask a question about the document ❔"):
     st.session_state.messages.append({"role": "user", "content": user_question})
     with st.chat_message("user"):
         st.markdown(user_question)
-    
+
+    from RAG_Functions import answer_Q, process_docs_to_chromaDB,answer_Q
     answer = answer_Q(user_question)
     
     with st.chat_message("assistant",avatar=BOT_AVATAR):

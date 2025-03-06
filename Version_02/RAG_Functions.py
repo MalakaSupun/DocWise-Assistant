@@ -31,6 +31,7 @@ def process_docs_to_chromaDB(file_name):
     return 0
 
 def answer_Q(user_quections):
+    
     vectordb = Chroma(
         persist_directory=f"{Working_dir}/doc_vector_store",
         embedding_function=embeddings
