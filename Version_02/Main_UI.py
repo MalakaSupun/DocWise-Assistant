@@ -66,7 +66,7 @@ if st.session_state.model != Model:
     # print(st.query_params['model'],"\n\n\n")
 
 st.sidebar.markdown("---")  # Add a horizontal line for separation
-st.sidebar.header("⏳ History ⏳")
+st.sidebar.header("History ⏳")
 st.sidebar.write("🧹 Clear the history 🌱 of this conversation 🍀 and start fresh... 🌟")
 
 # Sidebar with a button to delete chat history
