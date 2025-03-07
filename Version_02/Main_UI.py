@@ -6,7 +6,7 @@ import shelve
 
 
 # Set proxy (replace with your actual proxy URL)
-PROXY_URL = "http://192.168.101.243:44355"  
+PROXY_URL = ""  
 
 st.set_page_config(
     page_title="DocWise Assistant.",
@@ -30,14 +30,7 @@ def load_chat_history():
 
 # Save chat history to shelve file
 def save_chat_history(messages):
-    # clean_messages = []
-    # for msg in messages:
-    #     if isinstance(msg, re.Match):
-    #         clean_messages.append(msg.group(1))  # Store the matched text, not the object
-    #     else:
-    #         clean_messages.append(msg)
-
-    with shelve.open("chat_history") as db:
+   with shelve.open("chat_history") as db:
         db["messages"] = messages
 
 
