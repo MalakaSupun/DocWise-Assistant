@@ -12,16 +12,18 @@ DocWise Assistant
 DocWise Assistance is an intelligent chatbot application powered by advanced Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) techniques. 📚🤖 The system is designed to process and understand multiple PDF documents, enabling users to ask any questions about the content within those files and receive accurate, context-aware answers. 📝❓💡
 
 #
-## Next Version: 
-Project is being updated to its full potential to become more reliable and user-friendly. 
+## 🚀 Version 2.0:
+
+We are thrilled to announce the release of DocWise Assistant Version 2.0! 🎉 This update brings a host of new features and improvements designed to enhance your experience:
+
 <p align="center">
        <video width="1024" controls>
               <source src="Version_02/Videos/Version_2_0.mp4" type="video/mp4">
-              Your browser does not support the video tag.
+              <!-- Your browser does not support the video tag. -->
        </video>
 </p>
 
-[![Watch the video](Version_02/Videos/Video_IMG.png)](https://github.com/MalakaSupun/DocWise-Assistant/blob/main/Version_02/Videos/Version_2_0.mp4)
+<!-- [![Watch the video](Version_02/Videos/Video_IMG.png)](https://github.com/MalakaSupun/DocWise-Assistant/blob/main/Version_02/Videos/Version_2_0.mp4) -->
 
 🚀✨ Version 02 come with exciting new changes and improvements:
 
