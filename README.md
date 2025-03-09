@@ -17,14 +17,14 @@ DocWise Assistance is an intelligent chatbot application powered by advanced Lar
 We are thrilled to announce the release of DocWise Assistant Version 2.0! 🎉 This update brings a host of new features and improvements designed to enhance your experience:
 
 <p align="center">
-       <video width="1024" controls>
-              <source src="Version_02/Videos/Version_2_0.mp4" type="video/mp4">
-       </video>
+       <a href="Version_02/Videos/Version_2_0.mp4">
+              <img width="1024" src="Version_02/Videos/Video_IMG.png" alt="Watch the video">
+       </a>
 </p>
 
-[![Watch the video](Version_02/Videos/Video_IMG.png)](https://github.com/MalakaSupun/DocWise-Assistant/Version_02/Videos/Version_2_0.mp4)
+<!-- [![Watch the video](Version_02/Videos/Video_IMG.png)](https://github.com/MalakaSupun/DocWise-Assistant/Version_02/Videos/Version_2_0.mp4) -->
 
-🚀✨ Version 02 come with exciting new changes and improvements:
+🚀✨ Version 02 comes with exciting new changes and improvements:
 
 
 1. **🔍 Multiple LLMs Added:** Now compatible with Deepseek, Mistral, and Llama.
