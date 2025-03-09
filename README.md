@@ -23,7 +23,7 @@ We are thrilled to announce the release of DocWise Assistant Version 2.0! 🎉 T
 </p> -->
 
 <video width="600" controls>
-  <source src="https://github.com/MalakaSupun/your-repo-name/raw/main/Version_02/Videos/Version_2_0.mp4" type="video/mp4">
+  <source src="https://github.com/MalakaSupun/DocWise-Assistant/raw/main/Version_02/Videos/Version_2_0.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
