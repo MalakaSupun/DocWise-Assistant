@@ -17,8 +17,8 @@ DocWise Assistance is an intelligent chatbot application powered by advanced Lar
 We are thrilled to announce the release of DocWise Assistant Version 2.0! 🎉 This update brings a host of new features and improvements designed to enhance your experience:
 
 <div align="center">
-       
-![Version_2_0](https://github.com/user-attachments/assets/4c7af10a-e153-45a1-8de1-ec01e00869e6)
+          
+![Version_2_0](https://github.com/user-attachments/assets/4c7af10a-e153-45a1-8de1-ec01e00869e6 "Version 2.0")
 
 </div>
 
